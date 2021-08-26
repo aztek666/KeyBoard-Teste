@@ -1,0 +1,81 @@
+/*  imports */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --background-color: #f0f0f0;
+    --background-secundary-color: #171717;
+    --letters-color: #202020;
+    --letter-color-hover: #28a1e7;
+    --key-selection: #AC3290;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: var( --background-color);
+    font-family: 'Roboto', sans-serif;
+}
+
+h1 {
+    color: var(--letters-color);
+    margin-bottom: 20px;
+}
+
+.keys {
+    display: grid;
+    grid-template-columns: repeat(9, 0fr);
+    gap: 10px;
+    float: left;
+}
+
+.numpad {
+    margin-left: 40px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    float: right;
+}
+
+.space {
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.key {
+    border-radius: 5px;
+    width: 80px;
+    height: 80px;
+    border: 2px solid var(--letters-color);
+    color: var(--letters-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.key::selection {
+    background-color: none;    
+    color: var(--key-selection);
+}
+
+.key.active {
+    border: 2px solid var(--letter-color-hover);
+    color: var(--letter-color-hover);
+    box-shadow: 2px 1px 5px var(--letter-color-hover);
+}
+
+footer {
+    margin-top: 20px;
+    color: var(--letters-color);
+    font-size: 13px;
+}
